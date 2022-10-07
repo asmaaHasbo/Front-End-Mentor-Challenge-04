@@ -1,0 +1,225 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    Font-size: 14px;
+}
+
+.chat{
+    width: 375px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 4px 5px 8px 1px grey;
+    border-radius: 34px;
+}
+
+.container {
+    padding: 10px;
+    background-color:  hsl(270, 20%, 96%);
+    border-radius: 0 0 20px 20px;
+}
+
+nav{
+    background-image: linear-gradient(to right , 
+ hsl(264, 100%, 61%)
+    ,hsl(293, 100%, 63%) );
+    display: flex;
+    padding: 2rem 1rem 1rem 1rem;
+    border-radius: 20px 20px 6px 6px;
+    position: relative;
+}
+
+nav img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-right: 10px;
+}
+
+nav h4{
+    
+    color: hsl(270, 20%, 96%);
+    padding-bottom: 2px;
+}
+
+nav p{
+    color:  hsl(276, 100%, 81%);
+}
+nav div{
+    padding-top: 7px;
+}
+
+nav::after{
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 38px;
+    background-color: white;
+    top: -15px;
+    left: 78px;
+    border-radius: 20px;
+}
+
+section{
+    display: grid;
+    gap: 10px;
+}
+
+.resivce p{
+    width: 64%;
+    color: hsl(276, 55%, 52%);
+    padding: 10px;
+    background-color: hsl(206deg 6% 79% / 28%);
+    margin-bottom: 10px;
+    border-radius: 20px 20px 20px 10px;
+}
+
+.sent img{
+    width: 70px;
+    height: 70px;
+    border-radius: 1rem;
+    margin-bottom: 10px;
+}
+
+.sent{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+.sent p{
+    width: fit-content;
+    padding: 10px;
+    background-color: white;
+    color: hsl(271, 15%, 43%);
+    margin-bottom: 10px;
+    box-shadow: 4px 5px 8px 1px grey;
+    border-radius: 20px 20px 10px 20px;
+}
+.sent div{
+    width: fit-content;
+}
+
+.price p{
+    background-image: 
+    linear-gradient(to right ,
+    hsl(293, 100%, 63%) 
+    ,hsl(264, 100%, 61%)
+    );
+    width: 75%;
+    color: hsl(270, 20%, 96%);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px 20px 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-left: 49px
+}
+
+.price span{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.price p::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 17px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+input{
+    width: 100%;
+    border: none;
+    padding: 15px;
+    border-radius: 40px;
+    
+}
+
+button{
+    border: none;
+    width: 30px;
+    height: 30px;
+    color: white;
+    background-color: hsl(271, 36%, 24%);
+    border-radius: 50%;
+    font-size: x-large;
+    position: absolute;
+    top: 8px;
+    right: 6px;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    align-content: center;
+}
+
+body::before , body::after{
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(
+        to bottom , hsl(293, 100%, 63%)  , hsl(264, 100%, 61%));
+    width: 25%;
+    height: 80%;
+    border-radius: 0 0 400px 0px;
+    z-index: -1;
+}
+
+body::after{
+    background-image: linear-gradient(45deg, #eee, #eee);
+    bottom: 0;
+    right: 0;
+    border-radius: 262px 0 0 0;
+    width: 20%;
+}
+
+
+aside h1{
+    font-size: 2rem;
+    color: hsl(271, 36%, 24%);
+    padding-bottom: 20px;
+}
+
+aside p {
+    font-size: 20px;
+    color: hsl(270, 7%, 64%);
+    line-height: 30px;
+}
+
+aside{
+    
+    width: 39rem;  
+}
+
+.page{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 8rem;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+/* mobile version */
+
+@media (max-width:375px) {
+    .chat{
+        width: 60%;
+    }
+    .page{
+        grid-template-columns: auto;
+        gap: 3rem;
+    }
+
+    aside{
+        width: 80%;
+    }
+}
